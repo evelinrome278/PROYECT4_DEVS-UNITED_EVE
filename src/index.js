@@ -3,10 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from "react-router-dom";
+import ProtectedContext from './Context/Protecter';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <ProtectedContext>
+
+        <App />
+      </ProtectedContext>
+  </BrowserRouter>    
   </React.StrictMode>,
   document.getElementById('root')
 );
