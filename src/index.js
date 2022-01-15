@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Feed from './pages/Feed'
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
 import ProtectedContext from './Context/Protecter';
@@ -11,7 +11,7 @@ ReactDOM.render(
     <BrowserRouter>
       <ProtectedContext>
 
-        <App />
+        <Feed />
       </ProtectedContext>
   </BrowserRouter>    
   </React.StrictMode>,
