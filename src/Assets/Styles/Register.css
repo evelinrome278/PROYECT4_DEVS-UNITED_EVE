@@ -1,0 +1,48 @@
+/* REGISTER*/
+::placeholder {
+    color: #914d8b;
+  }
+  
+  .inputUserName {
+    width: 22rem;
+    height: 3rem;
+    background-color: #150714;
+    padding-left: 1rem;
+  }
+  
+  .ContainerBtnColor input {
+    width: 48px;
+    height: 48px;
+    margin: 5px;
+    cursor: pointer;
+  }
+  
+  .btnPink {
+    background-color: #f50d5a;
+  }
+  .btnOrange {
+    background-color: #ff865c;
+  }
+  
+  .btnYellow {
+    background-color: #ffea5c;
+  }
+  .btnGreen {
+    background-color: #00da76;
+  }
+  .btnblue {
+    background-color: #0096ce;
+  }
+  .btnPurple {
+    background-color: #800fff;
+  }
+  
+  .btnContinue {
+    font-family: "Silkscreen", sans-serif;
+    margin-top: 2rem;
+    color: white;
+    background-color: #00da76;
+    width: 22rem;
+    height: 3rem;
+    cursor: pointer;
+  }

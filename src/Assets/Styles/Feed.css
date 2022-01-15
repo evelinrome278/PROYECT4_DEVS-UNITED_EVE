@@ -1,0 +1,83 @@
+/* FEED*/
+  
+#feed {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    padding: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .containerPost {
+    display: flex;
+    flex-direction: column;
+    background-color: #150714;
+    padding-top: 20px;
+    height: auto;
+  }
+  
+  .ContainerImgPost {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  
+  .ContainerContadorPost {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 20rem;
+    margin-right: 16rem;
+  }
+  
+  .textMax {
+    color: #f50d5a;
+  }
+  
+  .ContainerBtnPost {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 24rem;
+  }
+  
+  .imgAvatarPost {
+    width: 3rem;
+    border-radius: 150px;
+    margin: 0.5rem, 0.5rem;
+  }
+  
+  .textPost {
+    margin-left: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: 0;
+    font-family: "Fira Code", monospace;
+    width: 28rem;
+    height: 5rem;
+    background: #2f112d;
+    color: rgb(222, 140, 236);
+    resize: none;
+    overflow-y: scroll;
+  }
+  
+  .textPost::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .textPost::-webkit-scrollbar-thumb {
+    background: #00da76;
+    border-radius: 4px;
+  }
+  
+  .ContainerBtnPost button {
+    width: 10rem;
+    background-color: #2f112d;
+    color: #150714;
+    font-weight: bold;
+    font-family: "Silkscreen", sans-serif;
+    border: 0;
+    width: 7rem;
+    height: 1.5rem;
+    margin: 1rem;
+    cursor: pointer;
+  }
