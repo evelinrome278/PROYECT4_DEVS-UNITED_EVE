@@ -1,4 +1,7 @@
-import React from "react";
+import React, {useContext} from "react";
+import { Link } from "react-router-dom";
+import { AppContext } from "../Context/AppContext";
+
 import "../Assets/Styles/styles.css";
 import "../Assets/Styles/HeaderDevs.css";
 import LogoDevs from "../Assets/img/Group 2.png";
@@ -7,14 +10,17 @@ import LogoName2 from "../Assets/img/Vector.png";
 import Avatar from "../Assets/img/image 2.png";
 
 const HeaderDevs = () => {
+
+  const {user}=useContext(AppContext);
+
   return (
     <header className="containerHeader">
       <div className="headerDevs">
         <div className="headerAvatar">
           <img
             className="imgAvatar"
-            src={Avatar}
-            alt="Logo Devs United"
+            src={user.photoURL}
+            alt="Avatar user"
             type="text"
           />
         </div>

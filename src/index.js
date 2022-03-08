@@ -1,19 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Feed from './pages/Feed'
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
-import ProtectedContext from './Context/Protecter';
+import {AppProvider} from "./Context/AppContext";
 
 ReactDOM.render(
   <React.StrictMode>
+    <AppProvider>
     <BrowserRouter>
-      <ProtectedContext>
+      
 
-        <Feed />
-      </ProtectedContext>
-  </BrowserRouter>    
+        <App />
+     
+  </BrowserRouter> 
+  </AppProvider>   
   </React.StrictMode>,
   document.getElementById('root')
 );

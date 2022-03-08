@@ -1,5 +1,5 @@
-import "../Styles/styles.css";
-import "../Styles/Register.css";
+import "../Assets/Styles/styles.css";
+import "../Assets/Styles/Register.css";
 import Copyright from "../Components/Copyright";
 import LogoDevs from "../Assets/img/logo big.svg";
 

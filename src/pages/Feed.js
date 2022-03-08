@@ -1,35 +1,30 @@
-import "../Assets/Styles/styles.css";
+import React, { useEffect, useState,useContext } from "react";
+import { Navigate } from "react-router-dom";
+import {AppContext} from "../Context/AppContext";
+import CreateTweets from "../Components/CreateTweets"
+
 import "../Assets/Styles/Feed.css";
+
 import Copyright from "../Components/Copyright";
 import HeaderDevs from "../Components/HeaderDevs";
-import Avatar from "../Assets/img/image 2.png";
+
+
+
 
 function Feed() {
+
+  const {user}= useContext(AppContext);
+  if (!user) return <Navigate to ="/"/>
+
   return (
-    <section id="feed ">
-      <div className="containerFeed">
+    <section id="feed">
+      <div>
         <HeaderDevs />
 
-        <div className="containerPost">
-          <div className="ContainerImgPost">
-            <img className="imgAvatarPost" src={Avatar} alt="avatar" />
-
-            <textarea
-              className="textPost"
-              maxlength="200"
-              placeholder="What´s happening?"
-            />
-          </div>
-
-          <div className="ContainerContadorPost">
-            <p>17</p>
-            <p className="textMax">200 max. </p>
-          </div>
-
-          <div className="ContainerBtnPost">
-            <button>POST</button>
-          </div>
-        </div>
+    <div>
+         <CreateTweets /> 
+     </div>
+       
         <Copyright />
       </div>
     </section>

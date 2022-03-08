@@ -1,33 +1,76 @@
-import React from 'react';
-
+import React, { useState,useContext } from "react";
+import { firestore } from "../firebase";
+import {AppContext} from "../Context/AppContext";
+import ShowTweets from "./ShowTweets";
+import "../Assets/Styles/Feed.css";
 
 function CreateTweets(){
+    
+    const { user}= useContext(AppContext);
+    const [body, setBody] = useState({
+    message: "",
+    user: "",
+    id: "",
+    mail: "",
+    image: "",
+    });
+    const handleChange = (e) => {
+    let newTweet = {
+    message: e.target.value,
+    email: user.email,
+    user: user.displayName,
+    image: user.photoURL,
+    likedBy: []
+    };
+    setBody(newTweet);
+    };
 
-// Crear Tweets 
-let createTweets =(e)=>{
+
+    const createTweet = (e) => {
     e.preventDefault();
+    firestore.collection("tweets")
+    .add(body)
+    .then(()=> console.log("Creado"))
+    .catch (()=> console.log("Algo salio mal"))
+    setBody({...body,
+    tweet: ""})
+    };
+    return (
+         
+        <div className="containerPost">
+            <div className="containerCreatePost">
+            <div className="ContainerImgPost">
+                <img className="imgAvatarPost" src={user.photoURL} alt="avatar" />
+            </div>
+            <form>
+                <textarea
+                    className="textPost"
+                    value={body.tweet}
+                    onChange={handleChange}
+                    placeholder="What´s happening?"
+                    name="tweet" 
+                />
+
+                <div className="ContainerContadorPost">
+                    <p>17</p>
+                    <p className="textMax">200 max. </p>
+                </div>   
+                <div className="ContainerBtnPost">     
+                    <button
+                        className="postbtn" 
+                        onClick={createTweet}>POST
+                    </button>
+                </div>
+            </form>
+            </div>
+            <ShowTweets/>
+        </div>    
     
-    const uploadTask = storage.ref().child(`/tweets/${file.name}`).put(file);
-    uploadTask
-    .on('state_changed', (snapshot)=>{
-      let progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
     
-      setProgress(progress);
-    },(err)=>{
-      console.error(err.message);
-    }, ()=>{
-      uploadTask.snapshot.ref.getDownloadURL().then((url) => {
-        firestore
-        .collection('tweets')
-        .add({...body, image:url})
-        .then (()=>console.log('se subio la imagen'))
-        .catch((err)=>console.error(err.message));
-  
-      })
-      setProgress(0);
     
-    } );
-  }
+    
+    );
+   
 }
 
 export default CreateTweets;
