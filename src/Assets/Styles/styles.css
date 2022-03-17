@@ -5,13 +5,26 @@
     border: 0;
     padding: 0;
   }
+
+  @font-face {
+    font-family: "Silkscreen";
+    src: local("Silkscreen"), url(../fonts/slkscr.ttf) format("truetype");
+  }
   
   body {
     background: #2e132c;
     font-family: "Fira Code", monospace;
     color: white;
-    
+    width: 100vw;
   }
+
+
+
+
+
+
+
+  
   
   
  

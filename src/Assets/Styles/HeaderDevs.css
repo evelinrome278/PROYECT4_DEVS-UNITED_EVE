@@ -1,25 +1,31 @@
 .containerHeader {
-    padding-left: 250px;
-    padding-right: 250px;
+  background: #250c23;
   }
   
   .imgAvatar {
     width: 2rem;
     border-radius: 150px;
-    border-color: 10px, aqua;
   }
   
   .headerDevs {
     display: flex;
     height: 52px;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
   }
   
   .imgLogo {
     width: 33px;
+    margin-left: 10rem;
+    margin-right: 9rem;
   }
   
   .imgName {
-    width: 67px;
+    width: 75px;
+    height: 15px;
+  }
+  
+  .imgName2 {
+    width: 85px;
+    height: 14px;
   }

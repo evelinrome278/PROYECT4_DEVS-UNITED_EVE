@@ -17,7 +17,7 @@ function Feed() {
   if (!user) return <Navigate to ="/"/>
 
   return (
-    <section id="feed">
+    <section className="containerPost">
       <div>
         <HeaderDevs />
 

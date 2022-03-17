@@ -37,33 +37,36 @@ function CreateTweets(){
     };
     return (
          
-        <div className="containerPost">
+        <div>
             <div className="containerCreatePost">
-            <div className="ContainerImgPost">
-                <img className="imgAvatarPost" src={user.photoURL} alt="avatar" />
-            </div>
-            <form>
-                <textarea
-                    className="textPost"
-                    value={body.tweet}
-                    onChange={handleChange}
-                    placeholder="What´s happening?"
-                    name="tweet" 
-                />
+            <form>    
+                <div className="ContainerImgPost">
+                    <img className="imgAvatarPost" src={user.photoURL} alt="avatar" />
+                
+                    <textarea
+                        className="textPost"
+                        value={body.tweet}
+                        onChange={handleChange}
+                        placeholder="What´s happening?"
+                        name="tweet" 
+                     />
+                </div>
 
                 <div className="ContainerContadorPost">
-                    <p>17</p>
+                    <p className="contMax">17</p>
                     <p className="textMax">200 max. </p>
-                </div>   
+                </div>  
+
                 <div className="ContainerBtnPost">     
                     <button
-                        className="postbtn" 
-                        onClick={createTweet}>POST
+                    className="postbtn" 
+                    onClick={createTweet}>POST
                     </button>
                 </div>
             </form>
             </div>
             <ShowTweets/>
+           
         </div>    
     
     

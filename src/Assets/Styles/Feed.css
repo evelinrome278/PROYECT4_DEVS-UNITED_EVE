@@ -1,20 +1,20 @@
 /* FEED*/
-  
-.feed {
-    width: 100%;
-    height: 100vh;
     
-  }
-  
   .containerPost {
-    
-    
-    
-    
+    width: 100%;
+  height: 100vh;
+  background-color: #2e132c;
   }
 
+
   .containerCreatePost{
+    display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  padding-top: 20px;
+  flex-wrap: wrap;
    background-color: #150714;
+   border-bottom: 3px solid #60265b; 
     
   }
 
@@ -22,25 +22,32 @@
   
   .ContainerImgPost {
     display: flex;
+    flex-direction: row;
     align-items: flex-start;
+    justify-content: center;
     
   }
   
   .ContainerContadorPost {
     display: flex;
     justify-content: space-around;
-    margin-left: 20rem;
-    margin-right: 16rem;
+
   }
-  
+
+  .contMax {
+    margin-left: 19rem;
+  }
+
+
   .textMax {
+    margin-right: 14rem;
     color: #f50d5a;
   }
   
   .ContainerBtnPost {
     display: flex;
     justify-content: flex-end;
-    margin-right: 24rem;
+    margin-right: 25rem;
   }
   
   .imgAvatarPost {
@@ -51,6 +58,9 @@
   
   .textPost {
    
+    margin-left: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     border: 0;
     font-family: "Fira Code", monospace;
     width: 28rem;
@@ -71,14 +81,86 @@
   }
   
   .ContainerBtnPost button {
-    width: 10rem;
+   
     background-color: #2f112d;
     color: #150714;
     font-weight: bold;
-    font-family: "Silkscreen", sans-serif;
+    font-family: "Silkscreen";
     border: 0;
     width: 7rem;
     height: 1.5rem;
     margin: 1rem;
     cursor: pointer;
+  }
+
+  hr {
+    
+    margin-left: 25rem;
+    margin-right: 25rem;
+    height: 3px;
+    border-width: 0;
+    background-color: #60265b;
+    
+  }
+  
+
+
+  .containerShowPost {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .userShowPost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .tabUser {
+    margin-left: 1rem;
+    padding-top: 5px;
+    text-align: center;
+    width: 9rem;
+    height: 1.5rem;
+    background: #FFEA5C;
+    font-family: "Silkscreen";
+    color: #2e132c;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: -0.333333px;
+  }
+  
+  .textShowPost {
+    margin-left: 31rem;
+    margin-right: 25rem;
+  }
+  
+  .basura {
+    cursor: pointer;
+    align-items: center;
+    width: 20px;
+    margin-left: 18rem;
+  }
+  
+  .containerliked {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 31rem;
+  }
+  
+  .iconLiked {
+    cursor: pointer;
+    width: 1.5rem;
+    margin-top:1rem ;
+    margin-bottom: 1rem;
+  }
+  
+  .cantliked {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    margin-top:1rem ;
   }
