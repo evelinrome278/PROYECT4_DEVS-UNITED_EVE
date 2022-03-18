@@ -9,8 +9,6 @@ import Copyright from "../Components/Copyright";
 import HeaderDevs from "../Components/HeaderDevs";
 
 
-
-
 function Feed() {
 
   const {user}= useContext(AppContext);
