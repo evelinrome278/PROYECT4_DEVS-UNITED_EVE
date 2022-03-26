@@ -1,4 +1,4 @@
-import React, { useEffect, useState,useContext } from "react";
+import React, { useContext } from "react";
 import { Navigate } from "react-router-dom";
 import {AppContext} from "../Context/AppContext";
 import CreateTweets from "../Components/CreateTweets"
@@ -19,9 +19,9 @@ function Feed() {
       <div>
         <HeaderDevs />
 
-    <div>
+      <div>
          <CreateTweets /> 
-     </div>
+      </div>
        
         <Copyright />
       </div>

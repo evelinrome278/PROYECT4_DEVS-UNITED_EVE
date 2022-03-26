@@ -7,7 +7,8 @@ import "../Assets/Styles/HeaderDevs.css";
 import LogoDevs from "../Assets/img/Group 2.png";
 import LogoName from "../Assets/img/Vector-1.png";
 import LogoName2 from "../Assets/img/Vector.png";
-import Avatar from "../Assets/img/image 2.png";
+
+
 
 const HeaderDevs = () => {
 
@@ -17,12 +18,14 @@ const HeaderDevs = () => {
     <header className="containerHeader">
       <div className="headerDevs">
         <div className="headerAvatar">
+        <Link to="/UserProfile">
           <img
             className="imgAvatar"
             src={user.photoURL}
             alt="Avatar user"
             type="text"
           />
+          </Link>
         </div>
         <div className="headerLogo">
           <img

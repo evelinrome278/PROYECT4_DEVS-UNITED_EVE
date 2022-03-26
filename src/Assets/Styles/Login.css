@@ -19,28 +19,34 @@
   
   h1 {
     font-family: "Silkscreen";
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bold;
     line-height: 12px;
     letter-spacing: -0.333333px;
+    margin-bottom:2rem;
   }
+
+  .text_login{
+    padding-bottom: 2rem;
+   
+  }
+
   .containerAcceso {
     padding-left: 142px;
     padding-right: 142px;
-  
     width: 50%;
   }
   .containerAcceso p {
     font-size: 20px;
   }
   
-  .btnGoogle button {
-    height: 58px;
-    width: 367px;
-    border-radius: 10px;
-    background-color: #4285f4;
+  .btnGoogle {
     color: white;
-    font-weight: bold;
-    font-size: 15px;
     cursor: pointer;
   }
+
+  .btnGoogle img{
+    width:18rem ;
+  }
+
+ 

@@ -6,6 +6,7 @@ import "../Assets/Styles/styles.css";
 import "../Assets/Styles/Login.css";
 import Feed from "../pages/Feed";
 
+import logoGoogle from "../Assets/img/google.png"
 import LogoDevs from "../Assets/img/logo big.svg";
 import Copyright from "../Components/Copyright";
 
@@ -45,16 +46,14 @@ function LoginGoogle() {
                </div>
                <div className="containerAcceso">
                  <div>
-                   <h1>LOREM</h1>
-                   <h1> IPSUM DOLOR </h1>
+                   <h1 >Welcome</h1>
+                  
                  </div>
                  <div>
-                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                   <p className="text_login">Puedes acceder con tu usuario de Google</p>
                  </div>
                  <div className="btnGoogle">
-                   <button
-                   onClick={loginG}
-                   >Sign in with Google</button>
+                    <img src={logoGoogle}  onClick={loginG} alt="Acceder Google"/>
                  </div>
                  <div>
                    {" "}

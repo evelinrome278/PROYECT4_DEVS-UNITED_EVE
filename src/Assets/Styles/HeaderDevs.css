@@ -5,6 +5,8 @@
   .imgAvatar {
     width: 2rem;
     border-radius: 150px;
+    border: 2px solid #ffea5c;
+   
   }
   
   .headerDevs {

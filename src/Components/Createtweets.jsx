@@ -5,7 +5,7 @@ import ShowTweets from "./ShowTweets";
 import "../Assets/Styles/Feed.css";
 
 function CreateTweets(){
-    
+    const [textLength, setTextLength] = useState("0");
     const { user}= useContext(AppContext);
     const [body, setBody] = useState({
     message: "",
@@ -22,6 +22,7 @@ function CreateTweets(){
     image: user.photoURL,
     likedBy: []
     };
+    setTextLength(e.target.value.length);
     setBody(newTweet);
     };
 
@@ -53,13 +54,13 @@ function CreateTweets(){
                 </div>
 
                 <div className="ContainerContadorPost">
-                    <p className="contMax">17</p>
+                    <p className="contMax">{textLength}</p>
                     <p className="textMax">200 max. </p>
                 </div>  
 
                 <div className="ContainerBtnPost">     
                     <button
-                    className="postbtn" 
+                    className="postbtn tabActive" 
                     onClick={createTweet}>POST
                     </button>
                 </div>

@@ -2,8 +2,8 @@ import React, {createContext, useState, useEffect} from 'react';
 import { firestore } from '../firebase';
 import { confirmAlert } from 'react-confirm-alert';
 import '../Assets/Styles/react-confirm-alert.css'; 
-
-
+import whiteheart from "../Assets/img/whiteheart.svg";
+import redheart from "../Assets/img/redheart.svg";
 
 export const AppContext = createContext();
 
@@ -11,12 +11,18 @@ export const AppContext = createContext();
 export const AppProvider= (props)=>{
   const [user, setUser]=useState(null);
   const [tweets, setTweets] = useState([]);
-  const [ isLoading, setIsLoading ] = useState(false);
+  const [ isLoading, setIsLoading ] = useState(true);
+  
+  
+
+ 
+    
 
 
   useEffect(() => {
     const desuscribir = firestore
     .collection("tweets")
+    
     .onSnapshot((snapshot) => {
     const tweets = snapshot.docs.map((doc) => {
     return {
@@ -29,8 +35,10 @@ export const AppProvider= (props)=>{
     };
     });
 
+    
+    
     setTweets(tweets);
-    //setIsLoading(false);
+    setIsLoading(false);
     });
     return () => desuscribir();
     }, []);
@@ -85,14 +93,14 @@ export const AppProvider= (props)=>{
     if (isLiked < 0){
     return (
     <>
-    <img className="like"src="./svgs/whiteheart.svg" onClick={() => likeTweet(tweet)}/>
+    <img className="iconLiked"src={whiteheart} onClick={() => likeTweet(tweet)}/>
     </>
     )
     }
     else {
     return (
     <>
-    <img className="dislike"src="./svgs/redheart.svg" onClick={() => dislikeTweet(tweet)}/>
+    <img className="iconLiked"src={redheart} onClick={() => dislikeTweet(tweet)}/>
     </>
     ) }
     } }
