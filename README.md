@@ -1,5 +1,21 @@
 # PROYECTO 4 DEVS UNITED
 
+4to proyecto para culminar el programa intensivo de ACAMICA - DESARROLLO WEB FRONT-END
+
+Desarrollo: Aplicación well fullstack
+
+
+deploy Firebase Aquí--> https://devunitedeve.web.app/
+
+
+Descripción
+El proyecto consiste en construir una aplicación web full-stack que simula una Red Social estilo Twitter pero orientada a programadores, utilizando React para hacer el front-end y firebase para hacer back-end. El objetivo es que se pueda vincular la comunidad del desarrollo, y reunirla en un lugar para discutir, ayudar y conectar con otras personas que compartan esta misma pasión.
+
+Desarrollado por Evelin Romero
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
